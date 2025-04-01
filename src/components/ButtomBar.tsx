@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Group, Text } from "@mantine/core";
+import { Box, Button, Flex,  Text } from "@mantine/core";
 
 function BottomBar() {
   return (

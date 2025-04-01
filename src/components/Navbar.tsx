@@ -59,13 +59,15 @@ const Navbar = () => {
         <Box
           style={{
             position: "absolute",
-            top: "60px", 
+            top: "60px",
             right: 0,
             // backgroundColor: "black",
             width: "100%",
             padding: "1rem",
             zIndex: 10,
             textAlign: "center",
+            backdropFilter: "blur(10px)", // Apply blur effect
+            backgroundColor: "rgba(0, 0, 0, 0.4)", // Optional: dark background with transparency
           }}
         >
           <a

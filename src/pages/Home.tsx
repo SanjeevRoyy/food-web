@@ -11,7 +11,6 @@ const Home = () => {
         style={{
           position: "relative",
           height: "60vh",
-          // width: "100vw",
           overflow: "hidden",
         }}
       >

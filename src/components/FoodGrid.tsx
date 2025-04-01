@@ -1,33 +1,35 @@
 import { Grid, Image, Container, Text, Title, Flex, Box } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 
 const foodItems = [
   { src: "/img/food4.jpg", alt: "Food 1", span: 6 },
   { src: "/img/food6.jpg", alt: "Food 2", span: 6 },
   { src: "/img/food2.jpg", alt: "Food 3", span: 4 },
   { src: "/img/food5.jpg", alt: "Food 4", span: 4 },
-  { src: "/img/food.jpg", alt: "Facebook Logo", span: 4 },
+  { src: "/img/food.jpg", alt: "Food 5", span: 4 },
 ];
 
 const FoodGrid = () => {
+  const isMobile = useMediaQuery("(max-width: 640px)");
   return (
     <>
       <Container pos="relative" bottom={80} my="xl">
         <Grid
-          gutter={0} // 🔥 FIX: Removes unwanted extra spacing
+          gutter={0}
           style={{
-            border: "2px solid rgb(133, 130, 130)", // ✅ Uniform outer border
-            borderRadius: "8px", // ✅ Slightly rounded for smoothness
-            overflow: "hidden", // ✅ Prevents gaps
+            border: "2px solid rgb(133, 130, 130)",
+            borderRadius: "8px",
+            overflow: "hidden",
           }}
         >
           {foodItems.map((item, index) => (
             <Grid.Col
               p={0}
               style={{
-                border: "1px solid rgb(133, 130, 130)", // ✅ Uniform inner border
+                border: "1px solid rgb(133, 130, 130)",
                 borderRight:
-                  index % 2 === 0 ? "none" : "2px solid rgb(133, 130, 130)", // ✅ Removes extra thick borders
-                borderBottom: "2px solid rgb(133, 130, 130)", // ✅ Ensures same bottom border thickness
+                  index % 2 === 0 ? "none" : "2px solid rgb(133, 130, 130)",
+                borderBottom: "2px solid rgb(133, 130, 130)",
                 overflow: "hidden",
                 position: "relative",
               }}
@@ -41,7 +43,6 @@ const FoodGrid = () => {
                   position: "relative",
                 }}
               >
-                {/* Dark Overlay */}
                 <div
                   style={{
                     position: "absolute",
@@ -54,7 +55,6 @@ const FoodGrid = () => {
                   }}
                 />
 
-                {/* Image */}
                 <Image
                   src={item.src}
                   alt={item.alt}
@@ -74,7 +74,13 @@ const FoodGrid = () => {
         </Grid>
       </Container>
 
-      <Flex mb={70} px={190} justify="space-between">
+      <Flex
+        mb={70}
+        px={isMobile ? 10 : 190}
+        justify="space-between"
+        direction={isMobile ? "column" : "row"}
+        gap={isMobile ? 10 : 40}
+      >
         <Flex
           style={{ borderRadius: "8px" }}
           direction="column"
@@ -86,19 +92,18 @@ const FoodGrid = () => {
           <Title size="h2" c={"#F5A13B"}>
             MAC'S PLACE
           </Title>
-          <Text mt={20} maw={600} lh="20px">
+          <Text mt={20} lh="20px">
             Mac's Place is the result of lifelong itch that had to finally be
             itched , at the insistence and staunch encouragement of my beautiful
-            wife Gina Marie .
+            wife Gina Marie.
           </Text>
-          <Text mt={10} maw={600} lh="20px">
-            Enjoy classic american fare with modern infusions . From breakfast
-            to just about whatever you're in the mood for , MAC has you covered
-            .
+          <Text mt={20} lh="20px">
+            Enjoy classic american fare with modern infusions. From breakfast to
+            just about whatever you're in the mood for, MAC has you covered.
           </Text>
         </Flex>
-        <Box p={10} bg="white" style={{ borderRadius: "8px" }}>
-          <Image src={"/img/food1.jpg"} alt="Food" width={300} height={300} />
+        <Box p={isMobile ? 2 : 10} bg="white" style={{ borderRadius: "8px" }}>
+          <Image src={"/img/food.jpg"} alt="Food" width={280} height={280} />
         </Box>
       </Flex>
     </>

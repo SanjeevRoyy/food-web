@@ -1,4 +1,4 @@
-import { Box, Button, Group, Text } from "@mantine/core";
+import { Box, Button, Flex, Group, Text } from "@mantine/core";
 
 function BottomBar() {
   return (
@@ -9,6 +9,7 @@ function BottomBar() {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
+        gap: "20px",
       })}
     >
       <Box>
@@ -31,7 +32,11 @@ function BottomBar() {
         </Text>
       </Box>
 
-      <Group justify="xs">
+      <Flex
+        gap="xs"
+        direction={{ base: "column", sm: "row" }} // Makes buttons stack on smaller screens
+        justify="center"
+      >
         <Button variant="transparent" color="gray">
           HOME
         </Button>
@@ -39,7 +44,7 @@ function BottomBar() {
           MENU
         </Button>
         <Button color="yellow">CONTACT</Button>
-      </Group>
+      </Flex>
     </Box>
   );
 }

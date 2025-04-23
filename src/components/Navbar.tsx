@@ -12,6 +12,7 @@ const Navbar = () => {
     <Container
       fluid
       py="md"
+      px={isMobile ? 10 : 180} // Adjust padding based on screen size
       style={{
         display: "flex",
         justifyContent: "space-between",

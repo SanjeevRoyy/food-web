@@ -1,4 +1,4 @@
-import { Box } from "@mantine/core";
+import { Box,  Title } from "@mantine/core";
 import Navbar from "../components/Navbar";
 import FoodGrid from "../components/FoodGrid";
 import BottomBar from "../components/ButtomBar";
@@ -34,6 +34,9 @@ const Home = () => {
           }}
         >
           <Navbar />
+          <Title  fw={600} mt={100} size="40px" ta="center" c="white">
+            HEY, YOU GOTTA EAT HERE!
+          </Title>
         </Box>
       </Box>
       <FoodGrid />

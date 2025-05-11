@@ -75,7 +75,6 @@ const FoodGrid = () => {
       </Container>
 
       <Flex
-        mb={70}
         px={isMobile ? 10 : 190}
         justify="space-between"
         direction={isMobile ? "column" : "row"}
@@ -87,6 +86,7 @@ const FoodGrid = () => {
           justify="center"
           bg="white"
           p={20}
+          mb={20}
         >
           <Text>STOP ON BY</Text>
           <Title size="h2" c={"#F5A13B"}>

@@ -1,8 +1,5 @@
 import { Box, Title } from "@mantine/core";
-import Navbar from "../components/Navbar";
 import FoodGrid from "../components/FoodGrid";
-import BottomBar from "../components/ButtomBar";
-import { Outlet } from "react-router-dom";
 
 const Home = () => {
   const isRoot = location.pathname === "/";
@@ -36,7 +33,6 @@ const Home = () => {
             height: "100%",
           }}
         >
-          <Navbar />
           <Title fw={600} mt={100} size="40px" ta="center" c="white">
             HEY, YOU GOTTA EAT HERE!
           </Title>
@@ -44,10 +40,7 @@ const Home = () => {
       </Box>
       {/* Only show FoodGrid if it's the root/home page */}
       {isRoot && <FoodGrid />}
-
-      <Outlet />
-
-      <BottomBar />
+            
     </Box>
   );
 };

@@ -1,9 +1,12 @@
-import { Box,  Title } from "@mantine/core";
+import { Box, Title } from "@mantine/core";
 import Navbar from "../components/Navbar";
 import FoodGrid from "../components/FoodGrid";
 import BottomBar from "../components/ButtomBar";
+import { Outlet } from "react-router-dom";
 
 const Home = () => {
+  const isRoot = location.pathname === "/";
+
   return (
     <Box style={{ backgroundColor: "black", minHeight: "100vh" }}>
       {/* Hero Section */}
@@ -34,12 +37,16 @@ const Home = () => {
           }}
         >
           <Navbar />
-          <Title  fw={600} mt={100} size="40px" ta="center" c="white">
+          <Title fw={600} mt={100} size="40px" ta="center" c="white">
             HEY, YOU GOTTA EAT HERE!
           </Title>
         </Box>
       </Box>
-      <FoodGrid />
+      {/* Only show FoodGrid if it's the root/home page */}
+      {isRoot && <FoodGrid />}
+
+      <Outlet />
+
       <BottomBar />
     </Box>
   );

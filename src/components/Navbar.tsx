@@ -3,6 +3,7 @@ import { useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { useMediaQuery } from "@mantine/hooks";
 import { IoMdClose } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [opened, setOpened] = useState(false); // State for toggling the menu
@@ -39,18 +40,18 @@ const Navbar = () => {
       {/* Navbar Links (Desktop) */}
       {!isMobile && (
         <Group gap={40} justify="space-between">
-          <a href="#home" style={{ color: "white", textDecoration: "none" }}>
+          <Link to="/" style={{ color: "white", textDecoration: "none" }}>
             Home
-          </a>
-          <a href="#food" style={{ color: "white", textDecoration: "none" }}>
+          </Link>
+          <Link to="/food" style={{ color: "white", textDecoration: "none" }}>
             Our Food
-          </a>
-          <a
-            href="#locations"
+          </Link>
+          <Link
+            to="/location"
             style={{ color: "white", textDecoration: "none" }}
           >
             Where We’ll Be
-          </a>
+          </Link>
           <Button color="yellow">Contact</Button>
         </Group>
       )}

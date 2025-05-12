@@ -19,7 +19,6 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import { useState } from "react";
 import { CiShoppingCart } from "react-icons/ci";
-import { FaCheckCircle } from "react-icons/fa";
 import { toast } from "react-toastify";
 
 const dummyFood = [
@@ -121,19 +120,7 @@ const Order = () => {
       } else {
         updatedCart = [...prev, { ...item, qty: 1 }];
       }
-
-      // Show Toast notification
-      toast.success(`${item.name} added to cart successfully!`, {
-        position: "bottom-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        icon: <FaCheckCircle />,
-      });
-
+      toast.success("Added to cart");
       return updatedCart;
     });
   };
@@ -289,6 +276,7 @@ const Order = () => {
 
                 <Button
                   fullWidth
+                  variant="outline"
                   mt="md"
                   onClick={() => addToCart(item)}
                   color="yellow"
@@ -300,7 +288,6 @@ const Order = () => {
           ))}
         </Grid>
       </Paper>
-
     </Box>
   );
 };

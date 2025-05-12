@@ -6,6 +6,8 @@ import "@mantine/notifications/styles.css";
 import { MantineProvider } from "@mantine/core";
 import { BrowserRouter } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
+import '@mantine/dates/styles.css';
+
 import { ToastContainer } from "react-toastify";
 
 createRoot(document.getElementById("root")!).render(

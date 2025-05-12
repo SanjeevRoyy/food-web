@@ -71,7 +71,7 @@ const Navbar = () => {
           </h2>
           <p style={{ fontSize: "1.2rem", margin: 0 }}>9829310011</p>
           <a
-            href="https://facebook.com/gangaram"
+            href="https://facebook.com/sanjeev"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -81,7 +81,7 @@ const Navbar = () => {
               textDecoration: "underline",
             }}
           >
-            facebook.com/gangaram
+            facebook.com/sanjeev
           </a>
           <p style={{ fontSize: "0.9rem", marginBottom: "1.5rem" }}>
             Thank you for your interest! Please fill out the form below if you
@@ -235,7 +235,7 @@ const Navbar = () => {
               Our Food
             </a>
             <a
-              href="#locations"
+              href="#location"
               style={{
                 color: "white",
                 textDecoration: "none",

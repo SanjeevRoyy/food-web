@@ -12,6 +12,7 @@
   "dependencies": {
     "@locator/babel-jsx": "^0.4.4",
     "@mantine/core": "^7.17.3",
+    "@mantine/dates": "^8.0.0",
     "@mantine/hooks": "^7.17.3",
     "@mantine/notifications": "^8.0.0",
     "react": "^19.0.0",

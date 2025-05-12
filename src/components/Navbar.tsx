@@ -189,7 +189,7 @@ const Navbar = () => {
               to="/location"
               style={{ color: "white", textDecoration: "none" }}
             >
-              Where We’ll Be
+              Order
             </Link>
             <Button color="yellow" onClick={open}>
               Contact
@@ -243,7 +243,7 @@ const Navbar = () => {
                 display: "block",
               }}
             >
-              Where We’ll Be
+              Order
             </a>
             <Button
               w={160}

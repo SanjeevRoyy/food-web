@@ -213,7 +213,7 @@ const Navbar = () => {
             }}
           >
             <a
-              href="#home"
+              href="/"
               style={{
                 color: "white",
                 textDecoration: "none",
@@ -224,7 +224,7 @@ const Navbar = () => {
               Home
             </a>
             <a
-              href="#food"
+              href="food"
               style={{
                 color: "white",
                 textDecoration: "none",
@@ -235,7 +235,7 @@ const Navbar = () => {
               Our Food
             </a>
             <a
-              href="#location"
+              href="location"
               style={{
                 color: "white",
                 textDecoration: "none",
